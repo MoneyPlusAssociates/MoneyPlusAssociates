@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Benefits & Banking Partners | Money Plus Associates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+
+        .partner-logo {
+            width: 160px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+
+        /* SMALL LOGOS VISIBILITY BOOST */
+        .partner-logo-small {
+            width: 2000px;
+            height: 110px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 18px;
+            transform: scale(1.18);
+        }
+        .partner-logo-mid {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 18px;
+            transform: scale(1.18);
+        }
+        /* Extra hover for small logos */
+        .partner-card:hover .partner-logo-mid {
+            transform: scale(1.25);
+        }
+
+        /* Extra hover for small logos */
+        .partner-card:hover .partner-logo-small {
+            transform: scale(1.25);
+        }
+
+        .partner-card:hover .partner-logo {
+            transform: scale(1.05);
+        }
+        
+        .partner-section {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 24px;
+            padding: 55px 35px;
+        
+            /* Highlight Border */
+            border: 2px solid rgba(241, 196, 15, 0.45);
+        
+            /* Premium Shadow */
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06),
+                0 0 0 4px rgba(241, 196, 15, 0.08);
+        
+            position: relative;
+            overflow: hidden;
+        
+            transition: all 0.4s ease;
+        }
+        .partner-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+        
+            background: linear-gradient(
+                135deg,
+                #F1C40F,
+                #ffd700,
+                #ffffff,
+                #F1C40F
+            );
+        
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+        
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .partner-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 130px;
+        }
+        .partner-section:hover {
+            transform: translateY(-2px);
+        
+            box-shadow:
+                0 16px 40px rgba(0,0,0,0.08),
+                0 0 25px rgba(241, 196, 15, 0.25);
+        
+            border-color: #F1C40F;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-color: #F1C40F;
+        }
+        .partner-logo-placeholder {
+            width: 45px;
+            height: 45px;
+            background: rgba(30, 62, 98, 0.08);
+            color: #1E3E62;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .partner-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .trust-badge-top {
+            background: #1E3E62;
+            color: #F1C40F;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="/">
+
+    <img src="https://i.postimg.cc/0Qn31QPC/LOGO-WATER-MARK-111.png"
+         alt="Money Plus Associates Logo"
+         class="brand-logo">
+
+    <div>
+        <span class="brand-main">MONEY PLUS ASSOCIATES</span><br>
+        <span class="brand-sub">S N ASSOCIATES</span>
+    </div>
+
+</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/loans">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/benefits">Client Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/history">Milestones</a></li>
+                    <li class="nav-item"><a class="nav-link " href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 py-3">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-dark">Why Capital Seekers Choose Money Plus</h1>
+            <p class="text-muted max-w-2xl mx-auto">We bridge the gap between premier institutional lending architectures and your immediate financial milestones.</p>
+        </div>
+
+
+
+        <section class="partner-section text-center my-5 shadow-sm border">
+            <div class="trust-badge-top text-uppercase"><i class="fas fa-shield me-2"></i>Institutional Banking Network</div>
+            <h2 class="fw-bold text-dark mb-2">Our Official Banking & NBFC Co-Lending Partners</h2>
+            <p class="text-muted small mb-5 mx-auto" style="max-width: 600px;">
+                We work in sync with leading Indian financial institutions and regulatory intermediaries to provide flexible loan closures.
+            </p>
+
+            <div class="partner-grid">
+
+                    <div class="partner-card">
+                        <img src="/static/images/banks/hdfc_logo.png" class="partner-logo-small" alt="HDFC Bank">
+                        <p class="partner-name">HDFC Bank</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/icici_logo.png" class="partner-logo-small" alt="ICICI Bank">
+                        <p class="partner-name">ICICI Bank</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/axis_logo.png" class="partner-logo-small" alt="Axis Bank">
+                        <p class="partner-name">Axis Bank</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/idfc_logo.png" class="partner-logo-small" alt="IDFC First Bank">
+                        <p class="partner-name">IDFC First Bank</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/bandhan_logo.png" class="partner-logo-small" alt="Bandhan Bank">
+                        <p class="partner-name">Bandhan Bank</p>
+                    </div>
+                        <div class="partner-card">
+                        <img src="/static/images/banks/indusind_logo.png" class="partner-logo-small" alt="IndusInd Bank">
+                        <p class="partner-name">IndusInd Bank</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/axis_logo.png" class="partner-logo-small" alt="Axis Finance">
+                        <p class="partner-name">Axis Finance</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/smfg_logo.png" class="partner-logo-mid" alt="SMFG">
+                        <p class="partner-name">SMFG</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/aditya_birla_logo.png" class="partner-logo-small" alt="Aditya Birla">
+                        <p class="partner-name">Aditya Birla</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/bajaj_logo.png" class="partner-logo" alt="Bajaj Finserv">
+                        <p class="partner-name">Bajaj Finserv</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/chola_logo.png" class="partner-logo" alt="Cholamandalam">
+                        <p class="partner-name">Cholamandalam Investment</p>
+                      </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/finnable_logo.png" class="partner-logo-mid" alt="Finnable">
+                        <p class="partner-name">Finnable Capital</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/credit_saison_logo.png" class="partner-logo" alt="Credit Saison">
+                        <p class="partner-name">Credit Saison India</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/godrej_logo.png" class="partner-logo" alt="Godrej Capital">
+                        <p class="partner-name">Godrej Capital</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/incred_logo.png" class="partner-logo" alt="InCred">
+                        <p class="partner-name">InCred Financial</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="/static/images/banks/l&t finance_logo.png" class="partner-logo" alt="L&T Finance">
+                        <p class="partner-name">L&T Finance Holdings</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/piramal.png" class="partner-logo" alt="Piramal Finance">
+                        <p class="partner-name">Piramal Finance</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/poonawala_logo.png" class="partner-logo-mid" alt="Poonawalla Fincorp">
+                        <p class="partner-name">Poonawalla Fincorp</p>
+                    </div>
+                
+                    <div class="partner-card">
+                        <img src="/static/images/banks/tata_capital_logo.png" class="partner-logo-small" alt="Tata Capital">
+                        <p class="partner-name">Tata Capital Services</p>
+                    </div>
+        </div>
+        </section>
+        <div class="text-center mb-5">
+           
+            <h3 class="text-muted max-w-2xl mx-auto">Bridging your goals with smarter financial opportunities.</h3>
+        </div>
+
+        <div class="row g-4 mb-5 text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-bolt fs-1"></i></div>
+                    <h4 class="fw-bold">Rapid Verification</h4>
+                    <p class="text-muted small m-0">Get your application verified quickly through our smart multi-channel process, designed to reduce delays and speed up approvals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-percent fs-1"></i></div>
+                    <h4 class="fw-bold">Optimized Interest Rates</h4>
+                    <p class="text-muted small m-0">We compare multiple lenders in real time to get you the best possible interest rates.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-user-shield fs-1"></i></div>
+                    <h4 class="fw-bold">Regulated Transparency</h4>
+                    <p class="text-muted small m-0">No hidden charges or confusing terms. Every step is clear, secure, and aligned with trusted financial compliance standards.</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+ <footer class="footer-premium">
+    <div class="container">
+        <div class="row g-5 justify-content-between mb-5">
+
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6 pe-lg-5">
+                <h5 class="footer-heading">Money Plus Associates</h5>
+
+                <p class="small opacity-75 mb-4">
+                    A subsidiary unit operating under SN Associates brand framework.
+                    Serving verified business and individual micro-credit processing targets globally.
+                </p>
+
+                <div class="d-flex gap-3 social-icons">
+                    <a href="https://www.facebook.com/share/1aozrGBt6L/">
+                        <i class="fab fa-facebook-f text-white opacity-75"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/moneyplusassociates?igsh=MXdpdmtqbTlqbGEzaw==">
+                        <i class="fa-brands fa-instagram text-white opacity-75"></i>
+                    </a>
+
+                    <a href="https://wa.me/919912023621">
+                        <i class="fa-brands fa-whatsapp text-white opacity-75"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-3 col-md-6 px-lg-4 footer-links">
+                <h5 class="footer-heading">Corporate Profile</h5>
+
+                <ul class="list-unstyled text-white opacity-75 small">
+                    <li><a href="/history">About US</a></li>
+                    <li><a href="/loans">Our Services</a></li>
+                    <li><a href="/benefits">Clients Trust</a></li>
+                    <li><a href="#">Governance Policies</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-3 col-md-6 ps-lg-5">
+                <h5 class="footer-heading">Contact Hub</h5>
+
+                <ul class="list-unstyled text-white opacity-75 small">
+                    <li>
+                        <i class="fas fa-location-dot me-3"></i>
+                    
+                        <a href="https://www.google.com/maps/@17.0269643,81.7991554,3a,75y,14.45h,90t/data=!3m7!1e1!3m5!1sVUqX13vWYnY11ZoN9_nNHw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DVUqX13vWYnY11ZoN9_nNHw%26yaw%3D14.446147!7i16384!8i8192!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+                           target="_blank">
+                    
+                            Rajamahendravaram
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope me-2 text-gold"></i>
+                        dmemoneyplus@gmail.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone me-2 text-gold"></i>
+                        +91 9912023621
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="opacity-25 bg-light">
+
+        <div class="text-center small opacity-75 pt-2">
+            &copy; 2026 Money Plus Associates - S N Associates. All Rights Reserved. All underwriting subject to regulatory verification norms.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
