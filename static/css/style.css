@@ -930,7 +930,30 @@ body {
     }
 
 }
+@media (max-width: 768px){
 
+    .footer-premium{
+        text-align:left;
+        padding:50px 20px 20px;
+    }
+
+    .footer-premium .row{
+        row-gap:40px;
+    }
+
+    .footer-heading{
+        margin-bottom:18px;
+    }
+
+    .social-icons{
+        margin-top:15px;
+    }
+
+    .footer-links ul{
+        padding-left:0;
+    }
+
+}
 /* ==========================================
    PROFESSIONAL GOOGLE FORM EMBED
 ========================================== */
