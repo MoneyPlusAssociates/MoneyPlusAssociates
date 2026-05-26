@@ -1477,3 +1477,89 @@ body{
 .accordion-body {
     background-color: #151515;
 }
+
+/* =========================
+   PREMIUM FAQ SECTION
+========================= */
+
+.faq-section{
+    background:#f7f9fc;
+}
+
+.faq-badge{
+    background:rgba(241,196,15,0.15);
+    color:#b88900;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.faq-title{
+    font-size:2.5rem;
+    font-weight:700;
+    color:#081f3f;
+}
+
+.faq-subtitle{
+    color:#6c757d;
+    font-size:16px;
+}
+
+/* ACCORDION */
+
+.custom-faq .accordion-item{
+    border:none;
+    border-radius:20px !important;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    background:#ffffff;
+}
+
+.custom-faq .accordion-button{
+    background:#ffffff;
+    color:#081f3f;
+    font-weight:600;
+    font-size:18px;
+    padding:24px 28px;
+    box-shadow:none !important;
+}
+
+.custom-faq .accordion-button:not(.collapsed){
+    background:#081f3f;
+    color:#f7c948;
+}
+
+.custom-faq .accordion-button:focus{
+    box-shadow:none;
+}
+
+.custom-faq .accordion-body{
+    padding:25px 28px;
+    color:#5c6675;
+    line-height:1.8;
+    font-size:15px;
+    background:#ffffff;
+}
+
+/* ICON COLOR */
+
+.custom-faq .accordion-button::after{
+    filter: brightness(0) saturate(100%);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .faq-title{
+        font-size:2rem;
+    }
+
+    .custom-faq .accordion-button{
+        font-size:16px;
+        padding:20px;
+    }
+
+}
