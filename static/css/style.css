@@ -803,7 +803,20 @@ body {
     color:#f7c948;
     min-width:16px;
 }
+.footer-divider{
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 25px 0 20px;
+}
 
+.footer-copyright{
+    text-align: center;
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+}
 /* MOBILE RESPONSIVE */
 
 @media(max-width:768px){
