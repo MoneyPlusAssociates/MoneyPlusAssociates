@@ -1444,3 +1444,36 @@ body{
     }
 
 }
+
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #1f1f1f;
+    color: #d4af37;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-body {
+    background-color: #151515;
+}
