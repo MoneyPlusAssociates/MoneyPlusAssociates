@@ -3,11 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ product.title }} Hub | Money Plus Associates</title>
+    <title>Client Benefits & Banking Partners | Money Plus Associates</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+
+        .partner-logo {
+            width: 160px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+        .partner-card{
+            background:#fff;
+            border-radius:18px;
+            padding:25px 15px;
+            text-align:center;
+            transition:0.3s;
+            height:220px;
+        
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        
+        .partner-card a{
+            text-decoration:none;
+            width:100%;
+            height:100%;
+        
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        /* SMALL LOGOS VISIBILITY BOOST */
+        .partner-logo-small {
+            width: 2000px;
+            height: 110px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 18px;
+            transform: scale(1.18);
+        }
+        .partner-logo-mid {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 18px;
+            transform: scale(1.18);
+        }
+        /* Extra hover for small logos */
+        .partner-card:hover .partner-logo-mid {
+            transform: scale(1.25);
+        }
+
+        /* Extra hover for small logos */
+        .partner-card:hover .partner-logo-small {
+            transform: scale(1.25);
+        }
+
+        .partner-card:hover .partner-logo {
+            transform: scale(1.05);
+        }
+        
+        .partner-section {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 24px;
+            padding: 55px 35px;
+        
+            /* Highlight Border */
+            border: 2px solid rgba(241, 196, 15, 0.45);
+        
+            /* Premium Shadow */
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06),
+                0 0 0 4px rgba(241, 196, 15, 0.08);
+        
+            position: relative;
+            overflow: hidden;
+        
+            transition: all 0.4s ease;
+        }
+        .partner-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+        
+            background: linear-gradient(
+                135deg,
+                #F1C40F,
+                #ffd700,
+                #ffffff,
+                #F1C40F
+            );
+        
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+        
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .partner-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 130px;
+        }
+        .partner-section:hover {
+            transform: translateY(-2px);
+        
+            box-shadow:
+                0 16px 40px rgba(0,0,0,0.08),
+                0 0 25px rgba(241, 196, 15, 0.25);
+        
+            border-color: #F1C40F;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-color: #F1C40F;
+        }
+        .partner-logo-placeholder {
+            width: 45px;
+            height: 45px;
+            background: rgba(30, 62, 98, 0.08);
+            color: #1E3E62;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .partner-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .trust-badge-top {
+            background: #1E3E62;
+            color: #F1C40F;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,126 +200,229 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/loans">Back to Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/loans">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="/benefits">Client Benefits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/history">Milestones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/history">Milestones</a></li>
+                    <li class="nav-item"><a class="nav-link " href="/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="bg-white border-bottom py-5 mb-5 shadow-sm">
-        <div class="container">
-            <div class="d-flex align-items-center gap-4">
-                <div class="card-icon-wrap m-0" style="width:80px; height:80px; font-size:2.2rem; display: flex; align-items: center; justify-content: center; background: rgba(30, 62, 98, 0.1); color: #1E3E62; border-radius: 50%;">
-                    <i class="fas {{ product.icon }}"></i>
-                </div>
-                <div>
-                    <h1 class="fw-bold m-0 text-dark" id="loanTitle">{{ product.title }}</h1>
-                    <p class="lead text-muted m-0 mt-1">{{ product.tagline }}</p>
-                </div>
-            </div>
+    <main class="container my-5 py-3">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-dark">Why Capital Seekers Choose Money Plus</h1>
+            <p class="text-muted max-w-2xl mx-auto">We bridge the gap between premier institutional lending architectures and your immediate financial milestones.</p>
         </div>
-    </header>
 
-    <div class="container my-5">
-        <div class="row g-5">
-            <div class="col-lg-7">
-                <div class="p-4 rounded-4 shadow-sm bg-white border border-top-0" style="border-top: 5px solid #F1C40F !important; border-radius: 12px;">
-                    <h3 class="fw-bold mb-2 text-dark">Apply Online For Instant Processing</h3>
-                    <p class="text-muted small mb-4">Your request parameters will instantly format into our WhatsApp dispatch platform for verification.</p>
-                    
-                    <form id="whatsappLoanForm">
-                        <h5 class="fw-bold border-bottom pb-2 text-secondary mb-3"><i class="fas fa-calculator me-2"></i>Loan Requirements</h5>
-                        <div class="row g-3 mb-4">
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Requested Amount *</label>
-                                <input type="number" id="loanAmount" class="form-control" placeholder="e.g. ₹5,00,000" min="50000" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Monthly Revenue / Income *</label>
-                                <input type="number" id="clientIncome" class="form-control" placeholder="e.g. ₹45,000" min="20000" required>
-                            </div>
-                        </div>
 
-                        <h5 class="fw-bold border-bottom pb-2 text-secondary mb-3"><i class="fas fa-id-card me-2"></i>Personal Verification Data</h5>
-                        <div class="row g-3 mb-4">
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Full Name [As on PAN Card] *</label>
-                                <input type="text" id="clientName" class="form-control" placeholder="John Doe" pattern="[A-Za-z ]{3,50}" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Email Address *</label>
-                                <input type="email" id="clientEmail" class="form-control" placeholder="john.doe@example.com" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Mobile Phone Number *</label>
-                                <input type="tel" id="clientPhone" class="form-control" placeholder="+91 XXXXX XXXXX" pattern="[6-9][0-9]{9}" maxlength="10" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label small fw-semibold text-muted">Permanent Address *</label>
-                                <input type="text" id="clientAddress" class="form-control" placeholder="City, Landmark" required>
-                            </div>
-                        </div>
 
-                        <div class="form-check mb-4 small text-muted">
-                            <input class="form-check-input" type="checkbox" id="termsCheck" required>
-                            <label class="form-check-label" for="termsCheck">
-                                I confirm these parameters are accurate and wish to pass them to Money Plus Desk over WhatsApp secure routing.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn w-100 py-3 text-uppercase fw-bold text-white" style="background: #25D366; border: none; border-radius: 30px; letter-spacing: 0.5px;">
-                            <i class="fab fa-whatsapp me-2 fs-5"></i> Submit via WhatsApp Chat
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="card shadow-sm border-0 p-4 mb-4 bg-light" style="border-radius: 12px;">
-                    <h4 class="fw-bold mb-3 text-dark">Product Benchmarks</h4>
-                    <table class="table table-sm table-borderless m-0 bg-transparent">
-                        <tr class="border-bottom"><td class="py-2 text-muted small bg-transparent">Interest Rate:</td><td class="py-2 fw-bold text-success text-end bg-transparent">{{ product.interest_rate }}</td></tr>
-                        <tr class="border-bottom"><td class="py-2 text-muted small bg-transparent">Max Allocations:</td><td class="py-2 fw-bold text-dark text-end bg-transparent">{{ product.max_limit }}</td></tr>
-                        <tr class="border-bottom"><td class="py-2 text-muted small bg-transparent">Target Tenure:</td><td class="py-2 fw-bold text-dark text-end bg-transparent">{{ product.max_tenure }}</td></tr>
-                        <tr class="border-bottom"><td class="py-2 text-muted small bg-transparent">Minimum CIBIL:</td><td class="py-2 fw-bold text-warning text-end bg-transparent">{{ product.min_cibil }}</td></tr>
-                        <tr><td class="py-2 text-muted small bg-transparent">Age Range Window:</td><td class="py-2 fw-bold text-dark text-end bg-transparent">{{ product.age_limit }}</td></tr>
-                    </table>
-                </div>
-
-                <div class="mb-4">
-                    <h4 class="fw-bold text-dark mb-3"><i class="fas fa-shield-halved text-warning me-2"></i>Legal Eligibility Criteria</h4>
-                    <ul class="list-unstyled">
-                        {% for note in product.eligibility_notes %}
-                        <li class="d-flex align-items-start mb-2 small text-muted">
-                            <i class="fas fa-circle-check text-success me-2 mt-1"></i>
-                            <span>{{ note }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="fw-bold text-dark mb-3"><i class="fas fa-file-invoice-dollar text-warning me-2"></i>Required Documents List</h4>
-                    <div class="p-3 border rounded bg-white shadow-sm" style="border-radius: 12px;">
-                        {% for doc in product.documents %}
-                        <div class="d-flex align-items-center gap-3 p-2 border-bottom {% if loop.last %}border-0{% endif %}">
-                            <div class="bg-light text-center rounded-circle" style="width:35px; height:35px; line-height:35px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-file-pdf text-danger"></i>
-                            </div>
-                            <span class="small text-dark fw-medium">{{ doc }}</span>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section class="partner-section text-center my-5 shadow-sm border">
+    <div class="trust-badge-top text-uppercase">
+        <i class="fas fa-shield me-2"></i>Institutional Banking Network
     </div>
 
+    <h2 class="fw-bold text-dark mb-2">
+        Our Official Banking & NBFC Co-Lending Partners
+    </h2>
+
+    <p class="text-muted small mb-5 mx-auto" style="max-width: 600px;">
+        We work with trusted banks and NBFC partners across India to provide flexible and reliable loan solutions.
+    </p>
+
+    <div class="partner-grid">
+
+        <!-- HDFC -->
+        <div class="partner-card">
+            <a href="https://applyonline.hdfcbank.com/personal-loans.html?channelsource=DSA&DSACode=123020&SMCode=M16318&SECode=&LGCode=123020&LCCode=&TSECode=" target="_blank">
+                <img src="/static/images/banks/hdfc_logo.png" class="partner-logo-small" alt="HDFC Bank">
+                <p class="partner-name">HDFC Bank</p>
+            </a>
+        </div>
+
+        <!-- ICICI -->
+        <div class="partner-card">
+            <a href="https://ilens.icici.bank.in/login/" target="_blank">
+                <img src="/static/images/banks/icici_logo.png" class="partner-logo-small" alt="ICICI Bank">
+                <p class="partner-name">ICICI Bank</p>
+            </a>
+        </div>
+
+        <!-- Axis Bank -->
+        <div class="partner-card">
+            <a href="https://cpmgmt.axis.bank.in/ChannelPartnerWeb/" target="_blank">
+                <img src="/static/images/banks/axis_logo.png" class="partner-logo-small" alt="Axis Bank">
+                <p class="partner-name">Axis Bank</p>
+            </a>
+        </div>
+
+        <!-- IDFC -->
+        <div class="partner-card">
+            <a href="https://www.idfcfirstbank.com/" target="_blank">
+                <img src="/static/images/banks/idfc_logo.png" class="partner-logo-small" alt="IDFC First Bank">
+                <p class="partner-name">IDFC First Bank</p>
+            </a>
+        </div>
+
+        <!-- Bandhan -->
+        <div class="partner-card">
+            <a href="https://bandhanbank.com/" target="_blank">
+                <img src="/static/images/banks/bandhan_logo.png" class="partner-logo-small" alt="Bandhan Bank">
+                <p class="partner-name">Bandhan Bank</p>
+            </a>
+        </div>
+
+        <!-- Tata Capital -->
+        <div class="partner-card">
+            <a href="https://www.tatacapital.com/" target="_blank">
+                <img src="/static/images/banks/tata_capital_logo.png" class="partner-logo" alt="Tata Capital">
+                <p class="partner-name">Tata Capital Services</p>
+            </a>
+        </div>
+
+        <!-- Axis Finance -->
+        <div class="partner-card">
+            <a href="https://www.axisfinance.in/" target="_blank">
+                <img src="/static/images/banks/axis_logo.png" class="partner-logo-small" alt="Axis Finance">
+                <p class="partner-name">Axis Finance</p>
+            </a>
+        </div>
+
+        <!-- SMFG -->
+        <div class="partner-card">
+            <a href="https://www.smfgindiacredit.com/" target="_blank">
+                <img src="/static/images/banks/smfg_logo.png" class="partner-logo-mid" alt="SMFG">
+                <p class="partner-name">SMFG</p>
+            </a>
+        </div>
+
+        <!-- Aditya Birla -->
+        <div class="partner-card">
+            <a href="https://2699794492002.serviceurl.in/web/rvmp1/#/login" target="_blank">
+                <img src="/static/images/banks/aditya_birla_logo.png" class="partner-logo-small" alt="Aditya Birla">
+                <p class="partner-name">Aditya Birla</p>
+            </a>
+        </div>
+
+        <!-- Bajaj -->
+        <div class="partner-card">
+            <a href="https://www.bajajfinserv.in/" target="_blank">
+                <img src="/static/images/banks/bajaj_logo.png" class="partner-logo" alt="Bajaj Finserv">
+                <p class="partner-name">Bajaj Finserv</p>
+            </a>
+        </div>
+
+        <!-- Cholamandalam -->
+        <div class="partner-card">
+            <a href="https://www.cholamandalam.com/" target="_blank">
+                <img src="/static/images/banks/chola_logo.png" class="partner-logo" alt="Cholamandalam">
+                <p class="partner-name">Cholamandalam Investment</p>
+            </a>
+        </div>
+
+        <!-- Finnable -->
+        <div class="partner-card">
+            <a href="https://www.finnable.com/" target="_blank">
+                <img src="/static/images/banks/finnable_logo.png" class="partner-logo-mid" alt="Finnable">
+                <p class="partner-name">Finnable Capital</p>
+            </a>
+        </div>
+
+        <!-- Credit Saison -->
+        <div class="partner-card">
+            <a href="https://www.creditsaison.in/" target="_blank">
+                <img src="/static/images/banks/credit_saison_logo.png" class="partner-logo" alt="Credit Saison">
+                <p class="partner-name">Credit Saison India</p>
+            </a>
+        </div>
+
+        <!-- Godrej -->
+        <div class="partner-card">
+            <a href="https://godrejcapital.com/" target="_blank">
+                <img src="/static/images/banks/godrej_logo.png" class="partner-logo" alt="Godrej Capital">
+                <p class="partner-name">Godrej Capital</p>
+            </a>
+        </div>
+
+        <!-- InCred -->
+        <div class="partner-card">
+            <a href="https://www.incred.com/" target="_blank">
+                <img src="/static/images/banks/incred_logo.png" class="partner-logo" alt="InCred">
+                <p class="partner-name">InCred Financial</p>
+            </a>
+        </div>
+
+        <!-- L&T Finance -->
+        <div class="partner-card">
+            <a href="https://www.ltfs.com/" target="_blank">
+                <img src="/static/images/banks/lt_finance_logo.png" class="partner-logo" alt="L&T Finance">
+                <p class="partner-name">L&T Finance Holdings</p>
+            </a>
+        </div>
+
+        <!-- Piramal -->
+        <div class="partner-card">
+            <a href="https://www.piramalfinance.com/" target="_blank">
+                <img src="/static/images/banks/piramal.png" class="partner-logo" alt="Piramal Finance">
+                <p class="partner-name">Piramal Finance</p>
+            </a>
+        </div>
+
+        <!-- Poonawalla -->
+        <div class="partner-card">
+            <a href="https://poonawallafincorp.com/" target="_blank">
+                <img src="/static/images/banks/poonawala_logo.png" class="partner-logo-mid" alt="Poonawalla Fincorp">
+                <p class="partner-name">Poonawalla Fincorp</p>
+            </a>
+        </div>
+        <!-- IndusInd -->
+        <div class="partner-card">
+            <a href="https://www.indusind.com/" target="_blank">
+                <img src="/static/images/banks/indusind_logo.png" class="partner-logo-mid" alt="IndusInd Bank">
+                <p class="partner-name">IndusInd Bank</p>
+            </a>
+        </div>
+        
+
+    </div>
+</section>
+        <h6 class="bank-disclaimer">
+            Note: All bank logos and trademarks belong to their respective owners.
+            Money Plus Associates acts only as a financial service intermediary.
+        </h6>
+        <br><br>
+        <div class="text-center mb-5">
+           
+            <h2 class="fw-bold text-dark mb-2">Bridging your goals with smarter financial opportunities.</h2>
+        </div>
+
+        <div class="row g-4 mb-5 text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-bolt fs-1"></i></div>
+                    <h4 class="fw-bold">Rapid Verification</h4>
+                    <p class="text-muted small m-0">Get your application verified quickly through our smart multi-channel process, designed to reduce delays and speed up approvals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-percent fs-1"></i></div>
+                    <h4 class="fw-bold">Optimized Interest Rates</h4>
+                    <p class="text-muted small m-0">We compare multiple lenders in real time to get you the best possible interest rates.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+                    <div class="text-warning mb-3"><i class="fas fa-user-shield fs-1"></i></div>
+                    <h4 class="fw-bold">Regulated Transparency</h4>
+                    <p class="text-muted small m-0">No hidden charges or confusing terms. Every step is clear, secure, and aligned with trusted financial compliance standards.</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
  <footer class="footer-premium">
     <div class="container">
         <div class="row g-4 mb-5">
@@ -230,102 +504,6 @@
         </div>
     </div>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.getElementById('whatsappLoanForm').addEventListener('submit', function(event) {
-
-    event.preventDefault();
-
-    // FORM VALIDATION
-    if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-    }
-
-    // GET VALUES
-    const targetWhatsAppNumber = "919912023621";
-
-    const loanType = document.getElementById('loanTitle').innerText;
-
-    const clientName = document.getElementById('clientName').value.trim();
-
-    const clientEmail = document.getElementById('clientEmail').value.trim();
-
-    const clientPhone = document.getElementById('clientPhone').value.trim();
-
-    const clientAddress = document.getElementById('clientAddress').value.trim();
-
-    const loanAmount = document.getElementById('loanAmount').value.trim();
-
-    const clientIncome = document.getElementById('clientIncome').value.trim();
-
-    // EXTRA VALIDATIONS
-
-    // Loan amount minimum
-    if (Number(loanAmount) < 50000) {
-        alert("Minimum loan amount should be ₹50,000");
-        return;
-    }
-
-    // Salary minimum
-    if (Number(clientIncome) < 10000) {
-        alert("Minimum income should be ₹10,000");
-        return;
-    }
-
-    // Mobile validation
-    const mobileRegex = /^[6-9]\d{9}$/;
-
-    if (!mobileRegex.test(clientPhone)) {
-        alert("Enter valid Indian mobile number");
-        return;
-    }
-
-    // EMAIL VALIDATION
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(clientEmail)) {
-        alert("Enter valid email address");
-        return;
-    }
-
-    // NAME VALIDATION
-    const nameRegex = /^[A-Za-z ]{3,50}$/;
-
-    if (!nameRegex.test(clientName)) {
-        alert("Enter valid full name");
-        return;
-    }
-
-    // WHATSAPP MESSAGE
-    const messageText =
-`🏛️ NEW LOAN APPLICATION - MONEY PLUS
-
-📌 Product: ${loanType}
-
-👤 Name: ${clientName}
-
-💰 Loan Amount: ₹${loanAmount}
-
-💵 Monthly Income: ₹${clientIncome}
-
-📞 Phone: ${clientPhone}
-
-📧 Email: ${clientEmail}
-
-📍 Address: ${clientAddress}`;
-
-    // ENCODE MESSAGE
-    const encodedMessage = encodeURIComponent(messageText);
-
-    // WHATSAPP URL
-    const whatsappUrl =
-        `https://wa.me/${targetWhatsAppNumber}?text=${encodedMessage}`;
-
-    // OPEN WHATSAPP
-    window.open(whatsappUrl, '_blank');
-
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
