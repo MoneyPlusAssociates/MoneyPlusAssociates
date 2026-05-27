@@ -66,11 +66,11 @@
                         <div class="row g-3 mb-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Requested Amount *</label>
-                                <input type="text" id="loanAmount" class="form-control" placeholder="e.g. ₹5,00,000" required>
+                                <input type="number" class="form-control" name="loan_amount" placeholder="e.g. ₹5,00,000" min="50000" max="100000000" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Monthly Revenue / Income *</label>
-                                <input type="text" id="clientIncome" class="form-control" placeholder="e.g. ₹45,000" required>
+                                <input type="number" class="form-control" name="salary" placeholder="e.g. ₹45,000" min="30000" max="10000000" required>
                             </div>
                         </div>
 
@@ -78,15 +78,15 @@
                         <div class="row g-3 mb-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Full Name [As on PAN Card] *</label>
-                                <input type="text" id="clientName" class="form-control" placeholder="John Doe" required>
+                                <input type="text" class="form-control" name="fullname" placeholder="Full Name" pattern="[A-Za-z ]{3,50}" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Email Address *</label>
-                                <input type="email" id="clientEmail" class="form-control" placeholder="john.doe@example.com" required>
+                                <input type="email" class="form-control" name="email" placeholder="john@example.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Mobile Phone Number *</label>
-                                <input type="tel" id="clientPhone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                                <input type="tel" class="form-control" name="mobile" placeholder="+91 XXXXXX XXXXX" pattern="[6-9]{1}[0-9]{9}" maxlength="10" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Permanent Address *</label>
@@ -100,7 +100,31 @@
                                 I confirm these parameters are accurate and wish to pass them to Money Plus Desk over WhatsApp secure routing.
                             </label>
                         </div>
-
+                        <script>
+                            function validateForm(){
+                            
+                                const mobile = document.querySelector('[name="mobile"]').value;
+                                const amount = document.querySelector('[name="loan_amount"]').value;
+                                const salary = document.querySelector('[name="salary"]').value;
+                            
+                                if(amount < 50000){
+                                    alert("Minimum loan amount should be ₹50,000");
+                                    return false;
+                                }
+                            
+                                if(salary < 30000){
+                                    alert("Minimum income should be ₹10,000");
+                                    return false;
+                                }
+                            
+                                if(!/^[6-9]\d{9}$/.test(mobile)){
+                                    alert("Enter valid Indian mobile number");
+                                    return false;
+                                }
+                            
+                                return true;
+                            }
+                        </script>
                         <button type="submit" class="btn w-100 py-3 text-uppercase fw-bold text-white" style="background: #25D366; border: none; border-radius: 30px; letter-spacing: 0.5px;">
                             <i class="fab fa-whatsapp me-2 fs-5"></i> Submit via WhatsApp Chat
                         </button>
