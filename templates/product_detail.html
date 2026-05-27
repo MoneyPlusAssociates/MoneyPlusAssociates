@@ -66,11 +66,11 @@
                         <div class="row g-3 mb-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Requested Amount *</label>
-                                <input type="number" class="form-control" name="loan_amount" placeholder="e.g. ₹5,00,000" min="50000" max="100000000" required>
+                                <input type="text" id="loanAmount" class="form-control" placeholder="e.g. ₹5,00,000" min="50000" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Monthly Revenue / Income *</label>
-                                <input type="number" class="form-control" name="salary" placeholder="e.g. ₹45,000" min="10000" max="10000000" required>
+                                <input type="text" id="clientIncome" class="form-control" placeholder="e.g. ₹45,000" min="20000" required>
                             </div>
                         </div>
 
@@ -78,15 +78,15 @@
                         <div class="row g-3 mb-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Full Name [As on PAN Card] *</label>
-                                <input type="text" class="form-control" name="fullname" placeholder="Full Name" pattern="[A-Za-z ]{3,50}" required>
+                                <input type="text" id="clientName" class="form-control" placeholder="John Doe" pattern="[A-Za-z ]{3,50}" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Email Address *</label>
-                                <input type="email" class="form-control" name="email" placeholder="john@example.com" required>
+                                <input type="email" id="clientEmail" class="form-control" placeholder="john.doe@example.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Mobile Phone Number *</label>
-                                <input type="tel" class="form-control" name="mobile" placeholder="+91 XXXXXX XXXXX" pattern="[6-9]{1}[0-9]{9}" maxlength="10" required>
+                                <input type="tel" id="clientPhone" class="form-control" placeholder="+91 XXXXX XXXXX" pattern="[6-9][0-9]{9}" maxlength="10" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small fw-semibold text-muted">Permanent Address *</label>
@@ -100,7 +100,7 @@
                                 I confirm these parameters are accurate and wish to pass them to Money Plus Desk over WhatsApp secure routing.
                             </label>
                         </div>
-                       
+
                         <button type="submit" class="btn w-100 py-3 text-uppercase fw-bold text-white" style="background: #25D366; border: none; border-radius: 30px; letter-spacing: 0.5px;">
                             <i class="fab fa-whatsapp me-2 fs-5"></i> Submit via WhatsApp Chat
                         </button>
@@ -181,7 +181,7 @@
             <div class="col-lg-3 col-md-6 px-lg-4 footer-links">
                 <h5 class="footer-heading">Corporate Profile</h5>
 
-               <ul class="list-unstyled text-white opacity-75 small">
+                <ul class="list-unstyled text-white opacity-75 small">
                     <li><a href="/history">About US</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <li><a href="/loans">Our Services</a></li>
@@ -192,6 +192,7 @@
                    
                 </ul>
             </div>
+
             <!-- Column 3 -->
             <div class="col-lg-3 col-md-6 ps-lg-5">
                 <h5 class="footer-heading">Contact Hub</h5>
@@ -274,32 +275,6 @@
     window.open(whatsappBaseUrl, '_blank');
 });
     </script>
-<script>
-document.getElementById("whatsappLoanForm").addEventListener("submit", function(e){
 
-    const mobile = document.querySelector('[name="mobile"]').value;
-    const amount = document.querySelector('[name="loan_amount"]').value;
-    const salary = document.querySelector('[name="salary"]').value;
-
-    if(amount < 50000){
-        alert("Minimum loan amount should be ₹50,000");
-        e.preventDefault();
-        return;
-    }
-
-    if(salary < 10000){
-        alert("Minimum income should be ₹10,000");
-        e.preventDefault();
-        return;
-    }
-
-    if(!/^[6-9][0-9]{9}$/.test(mobile)){
-        alert("Enter valid 10-digit Indian mobile number");
-        e.preventDefault();
-        return;
-    }
-
-});
-</script>
 </body>
 </html>
