@@ -1884,3 +1884,24 @@ body{
     }
 
 }
+/* ==========================================
+   FOOTER FIX ONLY FOR MOBILE DESKTOP MODE
+========================================== */
+
+@media (max-width: 991px){
+
+    .footer-links{
+        display:block !important;
+    }
+
+    .footer-links ul{
+        width:100%;
+        padding-left:0;
+    }
+
+    .footer-links ul li{
+        display:block;
+        margin-bottom:10px;
+    }
+
+}
