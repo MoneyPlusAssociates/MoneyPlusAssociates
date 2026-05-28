@@ -86,7 +86,125 @@ body {
     position: relative;
     z-index: 999;
 }
+/* COMPANY VISUAL SECTION */
 
+.company-visual-section{
+    padding: 70px 40px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    margin-top: 40px;
+}
+
+.visual-badge{
+    background: rgba(255,193,7,0.12);
+    color: #d4a017;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.visual-title{
+    font-size: 42px;
+    font-weight: 700;
+    color: #082347;
+    line-height: 1.3;
+}
+
+.visual-text{
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.9;
+    margin-top: 20px;
+}
+
+.visual-points{
+    margin-top: 30px;
+}
+
+.visual-points div{
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #082347;
+}
+
+.visual-points i{
+    color: #f4b400;
+    margin-right: 10px;
+}
+
+.visual-image-box{
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.visual-image{
+    border-radius: 25px;
+    transition: 0.4s ease;
+}
+
+.visual-image:hover{
+    transform: scale(1.04);
+}
+/* HISTORY PAGE BACKGROUND */
+
+.milestone-hero-section{
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(5, 20, 45, 0.88),
+            rgba(5, 20, 45, 0.90)
+        ),
+        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* GLASS EFFECT BOXES */
+
+.premium-box,
+.bottom-feature-box,
+.achievement-card{
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TEXT COLORS */
+
+.milestone-main-title,
+.box-header h4,
+.focus-title,
+.team-member h5,
+.stat-card h3,
+.goal-item h5,
+.feature-item h5{
+    color: #ffffff;
+}
+
+.milestone-subtext,
+.stat-card p,
+.goal-item p,
+.team-member p,
+.focus-list li,
+.feature-item p{
+    color: rgba(255,255,255,0.75);
+}
+
+/* SECTION SPACING */
+
+.milestone-top{
+    margin-bottom: 70px;
+}
 /* Mobile spacing */
 @media (max-width: 991px) {
 
@@ -215,11 +333,19 @@ body {
     transform: rotate(-5deg);
 }
 
-.milestone-hero-section{
-    background: #f7f9fc;
-    padding-bottom: 80px;
-}
+/* GLASS EFFECT */
 
+.premium-box,
+.bottom-feature-box,
+.achievement-card{
+
+    background: rgba(255,255,255,0.08) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
 .section-badge{
     color: #d4a017;
     font-weight: 600;
