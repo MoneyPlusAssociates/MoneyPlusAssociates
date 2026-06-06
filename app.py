@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, send_from_directory
 import os
 import urllib.parse  # Correct library to handle the message spacing
 
@@ -145,12 +145,11 @@ from flask import send_from_directory
 
 @app.route('/sitemap.xml')
 def sitemap():
-return send_from_directory('.', 'sitemap.xml')
+    return send_from_directory('.', 'sitemap.xml')
 
 @app.route('/robots.txt')
 def robots():
-return send_from_directory('.', 'robots.txt')
-
+    return send_from_directory('.', 'robots.txt')
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
