@@ -141,6 +141,15 @@ def terms_conditions():
 @app.route('/disclaimer')
 def disclaimer():
     return render_template('disclaimer.html')
+from flask import send_from_directory
+
+@app.route('/sitemap.xml')
+def sitemap():
+return send_from_directory('.', 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots():
+return send_from_directory('.', 'robots.txt')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
