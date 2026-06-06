@@ -12,7 +12,23 @@
     <loc>https://moneyplusassociates.com/loans</loc>
     <priority>0.9</priority>
 </url>
+    
+<url>
+    <loc>https://moneyplusassociates.com/loans/personal</loc>
+</url>
 
+<url>
+    <loc>https://moneyplusassociates.com/loans/business</loc>
+</url>
+
+<url>
+    <loc>https://moneyplusassociates.com/loans/educational</loc>
+</url>
+
+<url>
+    <loc>https://moneyplusassociates.com/loans/house</loc>
+</url>
+    
 <url>
     <loc>https://moneyplusassociates.com/benefits</loc>
     <priority>0.8</priority>
